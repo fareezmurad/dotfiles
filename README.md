@@ -1,6 +1,6 @@
 # Dotfiles  
 
-This repository contains my dotfiles for Debian based Linux. It includes configuration for `zsh`, `vim`, `oh-my-posh`, and manages them using GNU `stow`.  
+This repository contains my dotfiles for Debian based Linux. It includes configuration for `zsh`, `vim`, `oh-my-zsh`, `oh-my-posh`, and manages them using GNU `stow`.  
 
 Optional tools like `zoxide` and `fzf` are also recommended to enhance your workflow.  
 
@@ -9,6 +9,7 @@ Optional tools like `zoxide` and `fzf` are also recommended to enhance your work
 Ensure you have the following installed:  
 - **zsh**: A powerful shell alternative to bash.  
 - **vim**: A highly configurable text editor.  
+- **oh-my-zsh**: A framework for managing zsh configuration
 - **oh-my-posh**: A prompt theme engine for any shell.  
 - **GNU stow**: A symlink manager for dotfiles.  
 
@@ -32,6 +33,21 @@ sudo apt install -y zsh vim stow
 
 # Install oh-my-posh  
 curl -s https://ohmyposh.dev/install.sh | bash -s
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Run the following command to recover original .zshrc file that have been overwrite by ohmyzsh
+```bash
+mv ~/.zshrc ~/.zshrc.omz                                                                       
+mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+```
+
+Run the following command to install zsh-autosuggestion and zsh-syntax-highlighting
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
 ```
 
 Optional installations:
@@ -63,8 +79,9 @@ Restart your terminal or log out and log back in for the changes to take effect.
 ## Documentation
 
 - **zsh**: [`https://www.zsh.org/`](https://www.zsh.org/)  
-- **vim**: [`https://www.vim.org/`](https://www.vim.org/)  
-- **oh-my-posh**: [`https://ohmyposh.dev/`](https://ohmyposh.dev/)  
+- **vim**: [`https://www.vim.org/`](https://www.vim.org/)
+- **oh-my-zsh**: [`https://github.com/ohmyzsh/ohmyzsh/`](https://github.com/ohmyzsh/ohmyzsh/)
+- **oh-my-posh**: [`https://ohmyposh.dev/`](https://ohmyposh.dev/)
 - **GNU stow**: [`https://www.gnu.org/software/stow/`](https://www.gnu.org/software/stow/)  
 - **zoxide**: [`https://github.com/ajeetdsouza/zoxide`](https://github.com/ajeetdsouza/zoxide)  
 - **fzf**: [`https://github.com/junegunn/fzf`](https://github.com/junegunn/fzf)  
