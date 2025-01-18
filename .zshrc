@@ -1,3 +1,6 @@
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
 # Set the prompt
 # PROMPT='%B%F{#FF55FF}%m%F{#FFFFFF}:%F{#55FFFF}%~%f%b%# '
 
@@ -33,6 +36,10 @@ alias gb='git branch'
 alias gco='git checkout'
 alias ga.='git add .'
 alias omp-themes='cd ~/.cache/oh-my-posh/themes'
+
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
 
 # Set the default editor
 export EDITOR=vim
