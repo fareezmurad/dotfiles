@@ -1,6 +1,9 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Uncomment the following line to disable auto-setting terminal title.
+DISABLE_AUTO_TITLE="true"
+
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -38,7 +41,7 @@ alias ll='ls -lah'
 alias gs='git status'
 alias gb='git branch'
 alias gco='git checkout'
-alias ga.='git add .'
+alias gaa='git add --all'
 alias omp-themes='cd ~/.cache/oh-my-posh/themes'
 
 # Set the default editor
