@@ -24,6 +24,10 @@ setopt correct
 # Enable history sharing across terminals
 setopt share_history
 
+# Disable case sensitivity for file path globbing and pattern matching
+setopt no_case_glob
+setopt no_case_match
+
 # Set history file size
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
