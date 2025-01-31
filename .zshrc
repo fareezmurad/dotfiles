@@ -41,6 +41,7 @@ setopt HIST_IGNORE_ALL_DUPS
 alias ..='cd ..'
 alias ...='cd ~/'
 alias c='clear'
+alias update='sudo apt update && sudo apt upgrade -y'
 alias ll='ls -lah'
 alias gs='git status'
 alias gb='git branch'
