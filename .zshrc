@@ -4,7 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -15,8 +15,8 @@ source $ZSH/oh-my-zsh.sh
 echo -ne "\e[4 q"
 
 # Enable command auto-completion
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 
 # Enable command correction
 setopt correct
